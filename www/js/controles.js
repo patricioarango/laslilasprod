@@ -1,6 +1,6 @@
 aplicacion.controller('catalogoCtrl',['$scope','$location','$http', function($scope, $location,$http){
       //$scope.status= 'test';
-      $http.get('razas.json').success(function(data){
+      $http.get('data.json').success(function(data){
         $scope.razas = data;
       });
   }]);
