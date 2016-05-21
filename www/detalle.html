@@ -1,3 +1,84 @@
-<div class="container">
-Detalles del id: {{detalle_variable}}
-</div>
+<div class="container" id="container" ng-repeat="detalle in detalles | filter: {id:id_toro}">
+        <section class="imagen">
+          <div class="row">
+            <div class="col s12">
+              <img class="responsive-img" src="{{detalle.imagen_toro}}">
+            </div>
+          </div>
+        </section>
+        <section class="compartir">
+          <div class="row center color_lilas_texto">
+            <div class="col s4">
+              <i class="material-icons">star</i>
+            </div>
+            <div class="col s4">
+              <i class="material-icons">share</i>
+            </div>
+            <div class="col s4">
+              <i class="material-icons">shopping_cart</i>
+            </div>
+          </div>
+        </section>
+        <section class="descripcion">
+          <div class="row grey lighten-3">
+            <div class="col s6">{{detalle.nombre_toro}}<br>F.N 06/05/09<br>HBA 783709<br>SENA SA I-67AA222<br>ADN N0168943</div>
+            <div class="col s6 color_lilas_texto right"><h5>DOSIS ${{detalle.precio}}.-</h5></div>
+          </div>
+          <div class="row grey lighten-2 ">
+            <div class="col s12">
+              <b>PAN</b> 33.2 KG<br>
+              <b>PAD</b> 244 KG/98<br>
+              <b>PAF</b> 495 KG/101<br>
+              <b>FRAME</b> 4.4<br>
+              <b>C.E.</b> 43 CM<br>
+              <b>PESO ADULTO</b> 940 KG<br>
+            </div>
+            
+          </div>
+          <div class="row grey lighten-3 ">
+            <div class="col s12">
+              <ul>
+                <li>- {{detalle.descripcion1}}</li>
+                <li>- {{detalle.descripcion2}}</li>
+                <li>- {{detalle.descripcion3}}</li>
+              </ul>
+            </div>
+            
+          </div>
+        </section>
+        <section class="descripcion_2 center">
+          <div class="row">
+            Las lilas 735 Catriel Amaz&oacute;n<br>
+            <b>Las Lilas 1244 Cacique Manuel Garc&iacute;a</b><br>
+            L.L. 882 M. Garc&iacute;a Stockman
+          </div>
+          <div class="row">
+            G T Maximum<br>
+            <b>Stevenson Maximum 930C</b><br>
+            J R S Elga 495R
+          </div>
+        </section>
+        <section class="imagen_hembra center">
+          <div class="row">
+            <div class="col s12">
+              <img class="responsive-img" src="{{detalle.imagen_toro2}}">
+            </div>
+            <div class="col s12">
+              Las Lilas 1244 Cacique Manuel Garcia(madre)
+            </div>
+          </div>
+        </section>
+        <section class="compartir">
+          <div class="row center color_lilas_texto">
+            <div class="col s4">
+              <i class="material-icons">star</i>
+            </div>
+            <div class="col s4">
+              <i class="material-icons">share</i>
+            </div>
+            <div class="col s4">
+              <i class="material-icons">shopping_cart</i>
+            </div>
+          </div>
+        </section>
+      </div>
