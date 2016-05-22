@@ -1,8 +1,7 @@
-[{"id":1,"nombre":"Henry","imagen":"http://dummyimage.com/327x207.jpg/dddddd/000000"},
-{"id":2,"nombre":"Wayne","imagen":"http://dummyimage.com/327x207.jpg/ff4444/ffffff"},
-{"id":3,"nombre":"Timothy","imagen":"http://dummyimage.com/327x207.jpg/cc0000/ffffff"},
-{"id":4,"nombre":"Willie","imagen":"http://dummyimage.com/327x207.jpg/ff4444/ffffff"},
-{"id":5,"nombre":"Edward","imagen":"http://dummyimage.com/327x207.jpg/5fa2dd/ffffff"},
-{"id":6,"nombre":"Earl","imagen":"http://dummyimage.com/327x207.jpg/ff4444/ffffff"},
-{"id":7,"nombre":"Gregory","imagen":"http://dummyimage.com/327x207.jpg/5fa2dd/ffffff"},
-{"id":8,"nombre":"Fred","imagen":"http://dummyimage.com/327x207.jpg/5fa2dd/ffffff"}]
+[{"id":1,"nombre":"Angus Negro","nombre_raza":"angus_negro","imagen":"img/angus.jpg"},
+{"id":2,"nombre":"Angus Colorado","nombre_raza":"angus_colorado","imagen":"img/angus.jpg"},
+{"id":3,"nombre":"Polled Hereford","nombre_raza":"polled_hereford","imagen":"img/angus.jpg"},
+{"id":4,"nombre":"Brangus Negro","nombre_raza":"brangus_negro","imagen":"img/angus.jpg"},
+{"id":5,"nombre":"Brangus Colorado","nombre_raza":"brangus_colorado","imagen":"img/angus.jpg"},
+{"id":6,"nombre":"Braford","nombre_raza":"braford","imagen":"img/angus.jpg"},
+{"id":8,"nombre":"Brahman","nombre_raza":"brahman","imagen":"img/angus.jpg"}]

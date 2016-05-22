@@ -16,7 +16,7 @@ aplicacion.controller('catalogoCtrl',['$scope','$location','$http', function($sc
   $scope.loginview = false;
   
       //$scope.status= 'test';
-      $http.get('laslilas.json').success(function(data){
+      $http.get('razas.json').success(function(data){
         $scope.razas = data;
 
       });
@@ -46,15 +46,34 @@ aplicacion.controller('detalleCtrl',['$scope', '$routeParams', '$http','$sce','$
 
 aplicacion.controller('filtrosCtrl',['$scope', '$routeParams', '$http','$sce','$rootScope','$filter',
     function($scope, $routeParams, $http,$sce,$rootScope,$filter) {
-      /*$scope.id_toro = $routeParams.id_detalle;
       $http.get('laslilas.json').success(function(data){
-        var found = $filter('getById')(data, $scope.id_toro);
-         console.log(found);
-         //$scope.selected = JSON.stringify(found);
+        $scope.catalogo = data;
+      });
+     $scope.setSort = function(type) { 
+      //if(type.toLowerCase()==$scope.sort)
+      $scope.sort = type.toLowerCase(); 
+    };
 
 
-        $scope.detalle = found;
-      });*/
+   $scope.colourIncludes = [];
+    $scope.includeColour = function(colour) {
+        var i = $.inArray(colour, $scope.colourIncludes);
+        if (i > -1) {
+            $scope.colourIncludes.splice(i, 1);
+        } else {
+            $scope.colourIncludes.push(colour);
+        }
+    }
+    
+    $scope.colourFilter = function(fruit) {
+        if ($scope.colourIncludes.length > 0) {
+            if ($.inArray(fruit.aptosvaquillonas, $scope.colourIncludes) < 0)
+                return;
+        }
+        
+        return fruit;
+    }
+
   }]);
 
 

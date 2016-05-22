@@ -1,7 +1,14 @@
 <div class="color_lilas_texto">
-	<div class="row center ">
-		<h4>Filtros</h4> 
+	<div class="container">
+		<div class="row ">
+			<div class="input-field">
+				<i class="material-icons prefix">search</i>
+				<input id="icon_prefix" type="text"ng-model="query" class="validate">
+				<label for="icon_prefix"></label>
+			</div>
+		</div>
 	</div>
+
 	<div class="row center">
 		<div class="s6 col">
 			<i class="material-icons large">flag</i>
@@ -11,30 +18,56 @@
 			<i class="material-icons large">poll</i>
 			<h6>Ranking</h6>
 		</div>
-		<div class="s6 col">
+		<div class="s6 col" ng-click="setSort('-precio')">
 			<i class="material-icons large">monetization_on</i>
 			<h6>Mayor Precio</h6>
 		</div>
-		<div class="s6 col">
+	
+		<div class="s6 col" ng-click="setSort('precio')">
 			<i class="material-icons large">attach_money</i>
 			<h6>Menor Precio</h6>
 		</div>
 	</div>
 	<div class="row  grey lighten-3">
 		<h5 class="center black-text">Aptos para vaquillonas</h5>
-		<div class=" col s3 offset-s3">
-			<p>
-			  <input name="group1" type="radio" id="test1" />
-			  <label for="test1" class=" black-text">15 meses</label>
-			</p>
-			<p>
-			  <input name="group1"   type="radio" id="test2" />
-			  <label for="test2" class=' black-text'>18 meses</label>
-			</p>
+		<div class=" row col s6 center">
+		15 meses
+			  <div class="switch">
+			    <label>
+			      Off
+			      <input type="checkbox" ng-click="includeColour('15_meses')">
+			      <span class="lever"></span>
+			      On
+			    </label>
+			  </div>
+			  </div>
+		<div class=" row col s6 center">
+			18 meses
+			  <div class="switch">
+			    <label>
+			      Off
+			      <input type="checkbox" ng-click="includeColour('18_meses')">
+			      <span class="lever"></span>
+			      On
+			    </label>
+			  </div>
 		</div>
 	</div>
-	<div class="row center">
-		<div class="col s6 grey"><i class="material-icons medium">refresh</i></div>
-		<div class="col s6 green"><i class="material-icons medium">navigate_next</i></div>
-	</div>
 </div>
+
+    <div class="row">
+    	<div class="col s6" ng-repeat="cat in catalogo | filter:query | orderBy:sort | filter:colourFilter">
+    		<a href="#/detalle/{{cat.id}}">
+	          <div class="card">
+	            <div class="card-image">
+	              <img src="{{cat.imagen_toro}}">
+	            </div>
+	            <div class="card-content grey-text text-lighten-1">
+	              <h5>{{cat.nombre_toro}}</h5>
+	              Dosis {{cat.precio}}
+	              aptvaq: {{cat.aptosvaquillonas}}
+	            </div>
+	           </div>
+   			</a>
+        </div>
+	</div>
