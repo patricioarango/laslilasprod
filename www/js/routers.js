@@ -14,6 +14,10 @@
           .when('/detalle/:id_detalle', {
               templateUrl : 'detalle.html',
               controller  : 'detalleCtrl'
+          })
+          .when('/filtros', {
+              templateUrl : 'filtros.html',
+              controller  : 'filtrosCtrl'
           });
   });
 
