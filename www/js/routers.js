@@ -18,7 +18,11 @@
           .when('/filtros', {
               templateUrl : 'filtros.html',
               controller  : 'filtrosCtrl'
-          });
+          })
+          .when('/carrito', {
+              templateUrl : 'carrito.html',
+              controller  : 'carritoCtrl'
+          });         
   });
 
 /*angular.module('App', [])
