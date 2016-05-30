@@ -25,8 +25,8 @@ Cat&aacute;logo > {{detalle.nombre_raza_cat}} > {{detalle.nombre_toro}}
             <!-- <div class="col s4">
               <i class="material-icons">share</i>
             </div>-->
-            <div class="col s6">
-              <a href="mailto:laslilas@gmail.com?subject=Nueva Compra&body=Solicitud de nombre email%0para el {{detalle.nombre_toro}}, categoria%0DOSIS ${{detalle.precio}}<a href='www.laslilas.com/semen/arafat'>Ver Ficha</a>" target="_blank"><i class="material-icons pink-text text-darken-3">shopping_cart</i></a>
+            <div class="col s6" ng-click="agregarVenta()">
+              <a href="mailto:laslilas@gmail.com?subject=Nueva Compra&body=Solicitud de nombre email %0A para el {{detalle.nombre_toro}} - {{detalle.nombre_raza}} %0A DOSIS ${{detalle.precio}} %0A www.laslilas.com/semen/{{detalle.nombre_toro | lowercase}}" target="_blank"><i class="material-icons pink-text text-darken-3">shopping_cart</i></a>
             </div>
           </div>
         </section>
@@ -60,7 +60,7 @@ Cat&aacute;logo > {{detalle.nombre_raza_cat}} > {{detalle.nombre_toro}}
      
        
           <div class="row">
-            <div class="col s12">
+            <div class="col s12" style="padding: 0px;">
               <img class="responsive-img" src="{{detalle.imagen_toro2}}">
             </div>
           </div>

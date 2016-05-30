@@ -84,7 +84,7 @@
         
   </style>
     <body>
- <div class="navbar-fixed">
+ <div class="navbar-fixed" ng-controller="navegacionCtrl">
        <nav>
         <div class="nav-wrapper white ">
           <a href="#/" class="brand-logo color_lilas_texto">CABA&Ntilde;A LAS LILAS</a>
@@ -115,7 +115,7 @@
               </ul>
             </li>
             <div class="divider"></div>
-            <li><a href="#/carrito">Carrito <span class="badge teal-text" id="cant_ventas"style="font-size: 110%">4</span></a></li>
+            <li ng-repeat="venta in ventasActuales | limitTo:1"><a href="#/carrito">Carrito <span class="badge teal-text" id="cant_ventas"style="font-size: 110%">{{venta}}</span></a></li>
           </ul>
         </div>
       </nav>
@@ -157,11 +157,11 @@
       }
 
       //carrito
-      if (localStorage.getItem("laslilas_nro_ventas") === null) {
-        localStorage.setItem("laslilas_nro_ventas","0");
+      /*if (localStorage.getItem("laslilas_nro_ventas") === null) {
+        localStorage.setItem("laslilas_nro_ventas",0);
       }
 
-      $("#cant_ventas").text(localStorage.getItem("laslilas_nro_ventas"));
+      $("#cant_ventas").text(localStorage.getItem("laslilas_nro_ventas"));*/
   });
 
 </script>

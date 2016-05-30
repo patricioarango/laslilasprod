@@ -5,13 +5,13 @@
 	Cat&aacute;logo > {{nombre_raza}} 
 </div>
     <div class="row">
-    	<div class="col s6" ng-repeat="cat in catalogo | filter:{nombre_raza:id_raza}  ">
+    	<div class="col s6" ng-repeat="cat in catalogo | filter:{nombre_raza:id_raza}  " style="height:240px;">
     		<a href="#/detalle/{{cat.id}}">
 	          <div class="card">
 	            <div class="card-image">
 	              <img class="responsive-img" src="{{cat.imagen_toro}}">
 	            </div>
-	            <div class="card-content grey-text text-lighten-1">
+	            <div class="card-content grey-text text-lighten-1" style="    padding-top: 0px;">
 	              <h5>{{cat.nombre_toro}}</h5>
 	              Dosis {{cat.precio}}
 	            </div>
